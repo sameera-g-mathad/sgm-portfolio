@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap');
+
+.dancing-script {
+  font-family: 'Dancing Script', cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.momo-signature {
+  font-family: 'Momo Signature', cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.svg-text-middle {
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.animate-text {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: animation-text 4s ease-in-out forwards;
+}
+
+@keyframes animation-text {
+  0% {
+    stroke-dashoffset: 500;
+    fill-opacity: 0;
+    stroke-opacity: 0;
+  }
+  80% {
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+}
+
+.animate-line {
+  stroke-width: 1px;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  stroke-linecap: round;
+  animation: animation-line 10s ease-in-out forwards infinite;
+}
+
+@keyframes animation-line {
+  0% {
+    stroke-dashoffset: 1;
+    stroke-opacity: 0.5;
+  }
+  90% {
+    stroke-dashoffset: -10;
+  }
+  100% {
+    stroke-opacity: 0;
+  }
+}
+
+.animate-line:nth-of-type(1) {
+  animation-delay: calc(0.5s * 1 + 0.2s);
+}
+.animate-line:nth-of-type(2) {
+  animation-delay: calc(0.5s * 2 + 0.1s);
+}
+.animate-line:nth-of-type(3) {
+  animation-delay: calc(0.5s * 3 + 0.3s);
+}
+.animate-line:nth-of-type(4) {
+  animation-delay: calc(0.5s * 4 + 0.15s);
+}
+.animate-line:nth-of-type(5) {
+  animation-delay: calc(0.5s * 5 + 0.05s);
+}
+.animate-line:nth-of-type(6) {
+  animation-delay: calc(0.5s * 6 + 0.25s);
+}
+.animate-line:nth-of-type(7) {
+  animation-delay: calc(0.5s * 7 + 0.1s);
+}
+
+.animate-rotating-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: animation-rotating-path 10s ease-in-out infinite;
+}
+
+@keyframes animation-rotating-path {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: -1;
+  }
+}
